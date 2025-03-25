@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nero_shoe_app/brand_filter.dart';
+import 'package:nero_shoe_app/searchbar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,12 +28,7 @@ class _HomeState extends State<HomePage> {
                   SizedBox(width: 30),
 
                   Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Search here",
-                        prefixIcon: Icon(Icons.search),
-                      ),
-                    ),
+                    child: Search()
                   ),
                 ],
               ),
