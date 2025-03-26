@@ -4,7 +4,11 @@ import 'all_Items.dart';
 
 class Search extends StatelessWidget {
 
-  const Search({super.key});
+  final String selectedType;
+
+  const Search({super.key, required this.selectedType});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,8 @@ class Search extends StatelessWidget {
         },
 
         onSuggestionSelected: (suggestion) {
-          print('Selected: ${suggestion['name']}');
+          print("In Search,Brand is : ${selectedType}");
+
         },
       ),
     );

@@ -10,6 +10,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
+
+  String selectedBrand="All";
+
+  void stateChanger(String brand){
+    setState(() {
+      selectedBrand = brand;
+    });
+    print("In home, Brand is : ${selectedBrand}");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +38,7 @@ class _HomeState extends State<HomePage> {
                   SizedBox(width: 30),
 
                   Expanded(
-                    child: Search()
+                    child: Search(selectedType: selectedBrand)
                   ),
                 ],
               ),
@@ -36,7 +46,7 @@ class _HomeState extends State<HomePage> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 0,0),
-            child: BrandFilter(),
+            child: BrandFilter(homeToSearchStateChangeFunction: stateChanger,),
           )
 
         ],
