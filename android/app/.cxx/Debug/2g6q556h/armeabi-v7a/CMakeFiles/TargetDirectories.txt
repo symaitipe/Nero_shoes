@@ -1,0 +1,2 @@
+D:/nero_shoe_app/android/app/.cxx/Debug/2g6q556h/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/nero_shoe_app/android/app/.cxx/Debug/2g6q556h/armeabi-v7a/CMakeFiles/rebuild_cache.dir

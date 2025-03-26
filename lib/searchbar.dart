@@ -15,13 +15,6 @@ class Search extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TypeAheadField<Map<String, dynamic>>(
-        textFieldConfiguration: const TextFieldConfiguration(
-          decoration: InputDecoration(
-            labelText: 'Search',
-            border:OutlineInputBorder(),
-          ),
-
-        ),
 
         suggestionsCallback: (pattern) async {
           return allItems.where((item) =>
@@ -35,7 +28,7 @@ class Search extends StatelessWidget {
           );
         },
 
-        onSuggestionSelected: (suggestion) {
+        onSelected: (suggestion) {
           print("In Search,Brand is : ${selectedType}");
 
         },
