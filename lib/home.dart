@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nero_shoe_app/brand_filter.dart';
 import 'package:nero_shoe_app/searchbar.dart';
+import 'package:nero_shoe_app/show_items.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,8 +48,11 @@ class _HomeState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 0,0),
             child: BrandFilter(homeToFilterStateChangeFunction: stateChanger),
-          )
+          ),
 
+          Expanded(
+              child:ShowItems(selectedBrand)
+          )
         ],
       ),
     );
