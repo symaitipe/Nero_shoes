@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class BrandFilter extends StatefulWidget {
 
-  final Function homeToSearchStateChangeFunction;
-  const BrandFilter({super.key, required this.homeToSearchStateChangeFunction});
+  final Function homeToFilterStateChangeFunction;
+  const BrandFilter({super.key, required this.homeToFilterStateChangeFunction});
 
 
   @override
@@ -31,7 +31,7 @@ class _BrandState extends State<BrandFilter> {
                     _selectedBrand = brands[index];
                   });
                   print("In Select Brand, After change - Brand is : ${_selectedBrand}");
-                  widget.homeToSearchStateChangeFunction(brands[index]);
+                  widget.homeToFilterStateChangeFunction(brands[index]);
                 },
                 style: ElevatedButton.styleFrom(
 

@@ -46,7 +46,7 @@ class _HomeState extends State<HomePage> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 0,0),
-            child: BrandFilter(homeToSearchStateChangeFunction: stateChanger,),
+            child: BrandFilter(homeToFilterStateChangeFunction: stateChanger),
           )
 
         ],

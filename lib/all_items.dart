@@ -3,6 +3,7 @@
   const List<Map<String, dynamic>> allItems = [
     {
       "gender": "Male",
+      "brand":"Adidas",
       "name": "Adidas Running Shoes",
       "price": "Rs 1220.00",
       "sizes": [7, 8, 9],
@@ -11,6 +12,7 @@
     },
     {
       "gender": "Female",
+      "brand":"Nike",
       "name": "Nike Air Max",
       "price": "Rs 1500.00",
       "sizes": [6, 7, 8],
@@ -19,6 +21,7 @@
     },
     {
       "gender": "Unisex",
+      "brand":"Puma",
       "name": "Puma Sneakers",
       "price": "Rs 1300.00",
       "sizes": [8, 9, 10],
