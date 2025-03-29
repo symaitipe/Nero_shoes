@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BrandFilter extends StatefulWidget {
-  final Function(String) onBrandSelected;
 
-  const BrandFilter({super.key, required this.onBrandSelected});
+  final Function homeToFilterStateChangeFunction;
+  const BrandFilter({super.key, required this.homeToFilterStateChangeFunction});
 
 
   @override
@@ -12,7 +12,7 @@ class BrandFilter extends StatefulWidget {
 
 class _BrandState extends State<BrandFilter> {
   List<String> brands = ["All", "Adidas", "Nike", "Puma", "DSI", "AVI"];
-  String? _selectedBrand;
+  late String _selectedBrand = brands[0];
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +23,19 @@ class _BrandState extends State<BrandFilter> {
           itemCount: brands.length,
           itemBuilder: (context, index) {
             return Container(
-              margin: EdgeInsets.only(right: 20),
+              margin:EdgeInsets.only(right: 25),
               child: ElevatedButton(
                 onPressed: () {
+                  print("In Select Brand, Before change - Brand is : ${_selectedBrand}");
                   setState(() {
                     _selectedBrand = brands[index];
                   });
-                  widget.onBrandSelected(_selectedBrand!);
+                  print("In Select Brand, After change - Brand is : ${_selectedBrand}");
+                  widget.homeToFilterStateChangeFunction(brands[index]);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey[200],
+
+                  backgroundColor: _selectedBrand == brands[index]? Colors.yellow : Colors.grey[200],
                   foregroundColor: Colors.black,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
