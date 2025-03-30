@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
+import 'package:nero_shoe_app/product_details.dart';
 import 'all_Items.dart';
 
 class Search extends StatelessWidget {
@@ -60,9 +61,15 @@ class Search extends StatelessWidget {
           );
         },
         onSelected: (suggestion) {
-          print("Selected ${suggestion['name']} from brand: ${suggestion['brand']}");
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context)=>ProductDetailPage(product: suggestion),
+                  )
+              );
         },
       ),
     );
   }
 }
+

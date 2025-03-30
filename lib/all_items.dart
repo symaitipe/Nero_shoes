@@ -6,8 +6,11 @@
       "brand":"Adidas",
       "name": "Adidas Running Shoes",
       "price": "Rs 1220.00",
-      "sizes": [7, 8, 9],
-      "available_qty": 12,
+      "sizes": {
+        "7":"10",
+        "8":"11",
+        "9":"12"
+      },
       "image": "assets/adidas.jpg",
     },
     {
@@ -15,8 +18,11 @@
       "brand":"Nike",
       "name": "Nike Air Max",
       "price": "Rs 1500.00",
-      "sizes": [6, 7, 8],
-      "available_qty": 10,
+      "sizes": {
+        "6":"13",
+        "7":"14",
+        "8":"15"
+      },
       "image": "assets/nike.jpg",
     },
     {
@@ -24,9 +30,25 @@
       "brand":"Puma",
       "name": "Puma Sneakers",
       "price": "Rs 1300.00",
-      "sizes": [8, 9, 10],
-      "available_qty": 15,
+      "sizes": {
+        "8":"10",
+        "9":"11",
+        "10":"12"
+      },
       "image": "assets/puma.jpg",
+    },
+
+    {
+      "gender": "Unisex",
+      "brand":"Nike",
+      "name": "Nike Air force",
+      "price": "Rs 1300.00",
+      "sizes": {
+        "8":"1",
+        "9":"11",
+        "10":"12"
+      },
+      "image": "assets/nike-air.jpg",
     },
   ];
 
